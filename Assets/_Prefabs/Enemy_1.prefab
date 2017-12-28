@@ -56,8 +56,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4397456508554350}
   - component: {fileID: 54485670561043734}
-  - component: {fileID: 114109386232223974}
-  - component: {fileID: 114097068049989738}
+  - component: {fileID: 114694169311647418}
+  - component: {fileID: 114690737435882100}
   m_Layer: 9
   m_Name: Enemy_1
   m_TagString: Enemy
@@ -203,7 +203,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &114097068049989738
+--- !u!114 &114690737435882100
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6df46812437ae4489fe0fe65e058c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
-  keepOnScreen: 1
+  radius: -2.5
+  keepOnScreen: 0
   camWidth: 0
   camHeight: 0
   isOnScreen: 1
@@ -223,7 +223,7 @@ MonoBehaviour:
   offLeft: 0
   offUp: 0
   offDown: 0
---- !u!114 &114109386232223974
+--- !u!114 &114694169311647418
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -231,13 +231,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1614397063383088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f78a2b23d8ab74043b0a1267c20fd46b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c96b53fa247a2844aedec01136deef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
   fireRate: 0.3
   health: 10
   score: 100
+  waveFrequency: 2
+  waveWidth: 4
+  waveRotY: 45
 --- !u!135 &135249841418401384
 SphereCollider:
   m_ObjectHideFlags: 1
