@@ -29,15 +29,15 @@ public class Hero : MonoBehaviour {
         {
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
-        fireDelegate += TempFire;
     }
 
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         float xAxis = Input.GetAxis("Horizontal");
         float yAxis = Input.GetAxis("Vertical");
         Vector3 pos = transform.position;
@@ -49,17 +49,6 @@ public class Hero : MonoBehaviour {
         {
             fireDelegate();
         }
-	}
-
-    void TempFire()
-    {
-        GameObject projGO = Instantiate<GameObject>(projectilePrefab);
-        projGO.transform.position = transform.position;
-        Rigidbody rigidB = projGO.GetComponent<Rigidbody>();
-        Projectile proj = projGO.GetComponent<Projectile>();
-        proj.type = WeaponType.blaster;
-        float tSpeed = Main.GetWeaponDefinition(proj.type).velocity;
-        rigidB.velocity = Vector3.up * tSpeed;
     }
 
     public float shieldLevel
