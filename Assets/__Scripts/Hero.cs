@@ -30,8 +30,6 @@ public class Hero : MonoBehaviour {
         {
             Debug.LogError("Hero.Awake() - Attempted to assign second Hero.S!");
         }
-        ClearWeapons();
-        weapons[0].SetType(WeaponType.blaster);
     }
 
     Weapon GetEmptyWeaponSlot()
@@ -120,19 +118,12 @@ public class Hero : MonoBehaviour {
                 shieldLevel++;
                 break;
             default:
-                if (pu.type == weapons[0].type)
+                
+                foreach (Weapon w in weapons)
                 {
-                    Weapon w = GetEmptyWeaponSlot();
-                    if (w != null)
-                    {
-                        w.SetType(pu.type);
-                    }
-                } 
-                else
-                {
-                    ClearWeapons();
-                    weapons[0].SetType(pu.type);
+                    w.SetType(pu.type);
                 }
+                
                 break;
         }
         pu.AbsorbedBy(this.gameObject);
