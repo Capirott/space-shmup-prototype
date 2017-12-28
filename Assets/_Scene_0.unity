@@ -43,7 +43,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -89,7 +89,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000002, guid: 78caf7a5cc9f6a745aabbceda62513a9,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -245,7 +246,11 @@ MonoBehaviour:
   speed: 30
   rollMult: -45
   pitchMult: 30
-  shieldLevel: 1
+  gameRestartDelay: 2
+  projectilePrefab: {fileID: 1786743882040088, guid: 8e8590a87b43e1c40a7460feac34b043,
+    type: 2}
+  projectileSpeed: 40
+  _shieldLevel: 1
 --- !u!54 &520737049
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -397,6 +402,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemies:
   - {fileID: 1163180728567736, guid: 3b28e0edf7f81104495e69a72ce89093, type: 2}
+  - {fileID: 1614397063383088, guid: 55294ab885681684283e32d9156bdbd0, type: 2}
+  - {fileID: 1525407803697306, guid: be06662a9a24f9f48b237f8a83f19c64, type: 2}
+  - {fileID: 1564121739380354, guid: f0f07e0052825934799d7e53b55f7cc5, type: 2}
+  - {fileID: 1627612356641860, guid: 6717da1a50283c04ab147d7467e574f1, type: 2}
   enemySpawnPerSecond: 0.5
   enemyDefaultPadding: 1.5
 --- !u!1 &1337073162
