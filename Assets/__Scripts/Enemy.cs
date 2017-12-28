@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
     public int score = 100;
     public float showDamageDuration = 0.1f;
+    public float powerUpDropChance = 1f; 
     [Header("Set in Inspector: Enemy")]
     public float speed = 10f;
     public float fireRate = 0.3f;
@@ -100,6 +101,11 @@ public class Enemy : MonoBehaviour {
                 health -= Main.GetWeaponDefinition(p.type).damageOnHit;
                 if (health <= 0)
                 {
+                    if (!notifiedOfDestruction)
+                    {
+                        Main.S.shipDestroyed(this);
+                    }
+                    notifiedOfDestruction = true;
                     Destroy(this.gameObject);
                 }
                 Destroy(otherGO);
